@@ -1,13 +1,32 @@
 Here, a REST API is being created from scratch using simple vanilla node.js to demonstrate the fundamental principles of a REST API.
 
-1. we need a json file with products to imitate a database where we can request data from >> data/products.json
-2. then initialize a package.json >> npm init -y
-3. to monitor the server.js we need a monitoring tool >> npm i -D nodemon
-4. create these starting scripts:
-   "start": "node server.js",
-   "dev": "nodemon server.js"
-5. create server.js as an entry-point with:
-   - http - module (comes with node.js) and then as method to start the http-server >> const http = require('http')
-   - products - import to GET the data from the server >> const products = require('./data/products')
-6. with postman check the GET response >> all products shown up
-7. to create the different routes we use models and controlers
+1.  - create json file with products to imitate a database where we can request and send data
+      > data/products.json
+    - initialize a package.json
+      > npm init -y
+    - to monitor the server.js
+      > npm i -D nodemon
+    - to create Id's automaticaly we need a tool uuid
+      > npm i uuid
+    - create starting scripts
+      > "start": "node server.js", "dev": "nodemon server.js"
+    - create server.js as an entry-point with
+      - http-module (comes with node.js) as method to start the http-server
+        > const http = require('http')
+      - import products to GET the data from the server
+        > const products = require('./data/products')
+
+2.  - with postman check the GET response = all products shown up
+
+3.  - to create different routes use models and controllers = mvc-method (model-view-controller|view like react won't be needed as it's an pure api to test)
+      - to interact with the model (get,put,delete data etc.)
+        > controllers/productController.js
+      - to handle the data
+        > models/productModel.js
+
+4.  - connect server.js to the mvc:
+      > const { getProducts } = require('./controllers/productController')
+5.  - create the routes in the controller for
+      - allProducts = getProducts
+      - a single Product = getProduct
+      - add/post data to the server =
