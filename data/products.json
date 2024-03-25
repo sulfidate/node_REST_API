@@ -25,8 +25,14 @@
   },
   {
     "id": "5",
-    "name": "Apple Watch Series 6",
+    "name": "Apple Watch",
     "description": "Smartwatch with health and fitness tracking.",
     "price": 399
+  },
+  {
+    "id": "e28d1060-2074-4418-8e71-b6baadc9a890",
+    "name": "max max",
+    "description": "This is a Product",
+    "price": 50
   }
 ]
