@@ -25,8 +25,11 @@ Here, a REST API is being created from scratch using simple vanilla node.js to d
         > models/productModel.js
 
 4.  - connect server.js to the mvc:
-      > const { getProducts } = require('./controllers/productController')
-5.  - create the routes in the controller for
-      - allProducts = getProducts
-      - a single Product = getProduct
-      - add/post data to the server =
+      > const { getProducts, getProduct, createProduct } = require('./controllers/productController')
+    - connect utils.js to productModel to write data to file
+      > const fs = require('fs')
+
+5.  - create the routes in the productController for
+      - GET allProducts = getProducts
+      - GET a single Product = getProduct
+      - POST data to the json-file = createProduct

@@ -36,7 +36,28 @@ async function getProduct(req, res, id) {
 // @route   Post /api/products
 async function createProduct(req, res) {
     try {
+       
 
+       let body = '';
+         req.on('data', (chunk) => {
+              body += chunk.toString();
+            }
+            );
+        req.on('end', async () => {
+
+            const { name, description, price } = JSON.parse(body);
+
+            const product = {
+                name,
+                description,
+                price
+         }
+
+         const newProduct = await Product.create(product);
+
+        res.writeHead(201, { 'Content-Type': 'application/json' });
+        return res.end(JSON.stringify(newProduct));
+    })
     } catch (error) {
         console.log(error);
     }
@@ -45,5 +66,6 @@ async function createProduct(req, res) {
 
 module.exports = {
     getProducts,
-    getProduct
+    getProduct,
+    createProduct
 }
