@@ -1,4 +1,36 @@
-Here, a REST API is being created from scratch using simple vanilla node.js to demonstrate the fundamental principles of a REST API.
+# Node REST API
+
+> Full CRUD REST API using Node.js with no framework
+
+This is a full REST API from scratch using simple vanilla node.js to demonstrate the fundamental principles of a REST API:
+
+```
+# Routes
+GET      /api/products
+POST     /api/products
+GET      /api/products/:id
+PUT      /api/products/:id
+DELETE   /api/products/:id
+
+```
+
+## Usage
+
+```
+# Install dependencies
+npm install
+yarn install
+
+# Run in develpment
+npm run dev
+yarn run dev
+
+# Run in production
+npm start
+yarn start
+```
+
+# HowTo built
 
 1.  - create json file with products to imitate a database where we can request and send data
       > data/products.json
@@ -36,5 +68,3 @@ Here, a REST API is being created from scratch using simple vanilla node.js to d
 
 5.  Check all routes and functions with postman
     - Pics of all request are in the POSTMAN Folder
-
-This is a full REST API from scratch!
