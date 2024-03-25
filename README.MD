@@ -16,20 +16,25 @@ Here, a REST API is being created from scratch using simple vanilla node.js to d
       - import products to GET the data from the server
         > const products = require('./data/products')
 
-2.  - with postman check the GET response = all products shown up
-
-3.  - to create different routes use models and controllers = mvc-method (model-view-controller|view like react won't be needed as it's an pure api to test)
+2.  - to create different routes use models and controllers = mvc-method (model-view-controller|view like react won't be needed as it's an pure api to test)
       - to interact with the model (get,put,delete data etc.)
         > controllers/productController.js
       - to handle the data
         > models/productModel.js
 
-4.  - connect server.js to the mvc:
+3.  - connect server.js to the mvc:
       > const { getProducts, getProduct, createProduct } = require('./controllers/productController')
     - connect utils.js to productModel to write data to file
       > const fs = require('fs')
 
-5.  - create the routes in the productController for
-      - GET allProducts = getProducts
-      - GET a single Product = getProduct
-      - POST data to the json-file = createProduct
+4.  - create the routes in the productController:
+      - GET allProducts = getProducts()
+      - GET a single Product = getProduct()
+      - POST data to the json = createProduct()
+      - PUT update data by id = updateProduct()
+      - DELETE deletes data by id = deleteProduct()
+
+5.  Check all routes and functions with postman
+    - Pics of all request are in the POSTMAN Folder
+
+This is a full REST API from scratch!
