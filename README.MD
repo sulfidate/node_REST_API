@@ -4,6 +4,14 @@
 
 This is a full REST API from scratch using simple vanilla node.js to demonstrate the fundamental principles of a REST API:
 
+## Usage
+
+```
+I have deployed a live server running the REST API: http://195.201.88.30 at Port 81
+You can easily query the routes provided below using POSTMAN.
+
+```
+
 ```
 # Routes
 GET      http://195.201.88.30:81/api/products
@@ -11,14 +19,6 @@ POST     http://195.201.88.30:81/api/products
 GET      http://195.201.88.30:81/api/products/:id
 PUT      http://195.201.88.30:81/api/products/:id
 DELETE   http://195.201.88.30:81/api/products/:id
-
-```
-
-## Usage
-
-```
-I have deployed a live server running the REST API.
-You can easily query the routes provided above using POSTMAN.
 
 ```
 
