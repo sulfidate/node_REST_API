@@ -6,28 +6,19 @@ This is a full REST API from scratch using simple vanilla node.js to demonstrate
 
 ```
 # Routes
-GET      /api/products
-POST     /api/products
-GET      /api/products/:id
-PUT      /api/products/:id
-DELETE   /api/products/:id
+GET      http://195.201.88.30:81/api/products
+POST     http://195.201.88.30:81/api/products
+GET      http://195.201.88.30:81/api/products/:id
+PUT      http://195.201.88.30:81/api/products/:id
+DELETE   http://195.201.88.30:81/api/products/:id
 
 ```
 
 ## Usage
 
 ```
-# Install dependencies
-npm install
-yarn install
-
-# Run in develpment
-npm run dev
-yarn run dev
-
-# Run in production
-npm start
-yarn start
+I I have deployed a live server running the REST API.
+You can easily query the routes provided above using POSTMAN.
 ```
 
 # HowTo built
