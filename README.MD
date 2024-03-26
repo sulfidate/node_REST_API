@@ -17,8 +17,9 @@ DELETE   http://195.201.88.30:81/api/products/:id
 ## Usage
 
 ```
-I I have deployed a live server running the REST API.
+I have deployed a live server running the REST API.
 You can easily query the routes provided above using POSTMAN.
+
 ```
 
 # HowTo built
